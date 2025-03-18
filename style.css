@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #050210;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Prsten sa rotirajućim bojama */
+.ring {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: -10px solid transparent;
+    background: conic-gradient(#fb5dad, #55fb9f, #b97aff );
+    mask: radial-gradient(circle, transparent 60%, black 60%);
+    -webkit-mask: radial-gradient(circle, transparent 60%, black 60%);
+    animation: rotateRing 1s linear infinite;
+}
+
+/* Talas koji se širi iz centra */
+.wave {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 10%, transparent 60%);
+    animation: waveExpand 3s ease-out infinite;
+    opacity: 0;
+}
+
+/* Spoljni sjaj (senčenje) */
+.glow {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: conic-gradient(rgba(245, 180, 173, 0.2), rgba(85, 185, 191, 0.2), rgba(185, 122, 255, 0.2), rgba(245, 180, 173, 0.2));
+    filter: blur(40px);
+    animation: rotateGlow 1.5s linear infinite;
+}
+
+/* Animacija rotacije boja prstena */
+@keyframes rotateRing {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animacija talasa iz centra ka ivici prstena */
+@keyframes waveExpand {
+    0% {
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+    }
+    100% {
+        width: 180px;
+        height: 180px;
+        opacity: 0;
+    }
+}
+
+/* Animacija rotacije spoljnog sjaja */
+@keyframes rotateGlow {
+    50% {
+        transform: rotate(50deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
