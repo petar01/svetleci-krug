@@ -16,7 +16,6 @@ body {
     align-items: center;
 }
 
-/* Prsten sa rotirajućim bojama */
 .ring {
     position: absolute;
     width: 200px;
@@ -29,7 +28,6 @@ body {
     animation: rotateRing 1s linear infinite;
 }
 
-/* Talas koji se širi iz centra */
 .wave {
     position: absolute;
     width: 200px;
@@ -40,7 +38,6 @@ body {
     opacity: 0;
 }
 
-/* Spoljni sjaj (senčenje) */
 .glow {
     position: absolute;
     width: 260px;
@@ -51,7 +48,6 @@ body {
     animation: rotateGlow 1.5s linear infinite;
 }
 
-/* Animacija rotacije boja prstena */
 @keyframes rotateRing {
     0% {
         transform: rotate(0deg);
@@ -61,7 +57,6 @@ body {
     }
 }
 
-/* Animacija talasa iz centra ka ivici prstena */
 @keyframes waveExpand {
     0% {
         width: 50px;
@@ -75,7 +70,6 @@ body {
     }
 }
 
-/* Animacija rotacije spoljnog sjaja */
 @keyframes rotateGlow {
     50% {
         transform: rotate(50deg);
